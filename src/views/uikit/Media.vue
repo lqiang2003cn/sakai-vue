@@ -70,7 +70,6 @@ const getSeverity = (status) => {
     <div class="grid p-fluid">
         <div class="col-12">
             <div class="card">
-                <h5>Carousel</h5>
                 <Carousel :value="products" :numVisible="3" :numScroll="3" :responsiveOptions="carouselResponsiveOptions">
                     <template #item="slotProps">
                         <div class="border-1 surface-border border-round m-2 p-3">

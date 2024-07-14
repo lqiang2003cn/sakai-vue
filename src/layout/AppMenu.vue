@@ -9,10 +9,11 @@ const model = ref([
         items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
     },
     {
-        label: 'UI Components',
+        label: 'Word and Image',
         items: [
-            { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', to: '/uikit/formlayout' },
-            { label: 'Input', icon: 'pi pi-fw pi-check-square', to: '/uikit/input' },
+            { label: 'Learn', icon: 'pi pi-fw pi-user', to: '/uikit/media' },
+            { label: 'Select Image', icon: 'pi pi-fw pi-image', to: '/uikit/input' },
+            { label: 'Select Word', icon: 'pi pi-fw pi-file-edit', to: '/uikit/formlayout' },
             { label: 'Float Label', icon: 'pi pi-fw pi-bookmark', to: '/uikit/floatlabel' },
             { label: 'Invalid State', icon: 'pi pi-fw pi-exclamation-circle', to: '/uikit/invalidstate' },
             { label: 'Button', icon: 'pi pi-fw pi-mobile', to: '/uikit/button', class: 'rotated-icon' },
@@ -21,7 +22,6 @@ const model = ref([
             { label: 'Tree', icon: 'pi pi-fw pi-share-alt', to: '/uikit/tree' },
             { label: 'Panel', icon: 'pi pi-fw pi-tablet', to: '/uikit/panel' },
             { label: 'Overlay', icon: 'pi pi-fw pi-clone', to: '/uikit/overlay' },
-            { label: 'Media', icon: 'pi pi-fw pi-image', to: '/uikit/media' },
             { label: 'Menu', icon: 'pi pi-fw pi-bars', to: '/uikit/menu', preventExact: true },
             { label: 'Message', icon: 'pi pi-fw pi-comment', to: '/uikit/message' },
             { label: 'File', icon: 'pi pi-fw pi-file', to: '/uikit/file' },
