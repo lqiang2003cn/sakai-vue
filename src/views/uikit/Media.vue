@@ -3,6 +3,12 @@ import { ProductService } from '@/service/ProductService';
 import { PhotoService } from '@/service/PhotoService';
 import { ref, onMounted } from 'vue';
 
+const play = () => {
+  audioElement.play()
+};
+
+const audioElement = new Audio("/audio/new_audio.mp3");
+
 const products = ref([]);
 const images = ref([]);
 const galleriaResponsiveOptions = ref([
@@ -79,6 +85,9 @@ const getSeverity = (status) => {
                                     <Tag :value="slotProps.data.inventoryStatus" :severity="getSeverity(slotProps.data.inventoryStatus)" class="absolute" style="left: 5px; top: 5px" />
                                 </div>
                             </div>
+                            <div class="flex justify-content-between align-items-center">
+                                <Button icon="pi pi-play" label="Play" outlined @click="play" />
+                            </div>
                             <div class="mb-3 font-medium">{{ slotProps.data.name }}</div>
                             <div class="flex justify-content-between align-items-center">
                                 <div class="mt-0 font-semibold text-xl">${{ slotProps.data.price }}</div>
@@ -113,7 +122,7 @@ const getSeverity = (status) => {
                     </template>
                     <template #thumbnail="slotProps">
                         <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt"
-                            tyle="width: 100%; display: block;" />
+                            style="width: 100%; display: block;" />
                     </template>
                 </Galleria>
             </div>
