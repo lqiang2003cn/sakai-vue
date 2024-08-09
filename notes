@@ -1,0 +1,15 @@
+    <div class="grid">
+        <div class="col-12">
+            <div class="card">
+              <div class="flex justify-content-center">
+                  <Image  :src="'/demo/images/avatar/amyelsner.png'" alt="Image"  />
+              </div>
+              <div class="flex justify-content-center" >
+                <Button type="button" class="mr-2 mb-2" label="Search" icon="pi pi-search"  />
+                <Button type="button" class="mr-2 mb-2" label="Search" icon="pi pi-search" />
+                <Button type="button" class="mr-2 mb-2" icon="pi pi-search" />
+                <Button type="button" class="mr-2 mb-2" label="Search" />
+              </div>
+            </div>
+        </div>
+    </div>

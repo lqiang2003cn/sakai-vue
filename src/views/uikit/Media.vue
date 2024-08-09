@@ -32,8 +32,8 @@ const galleriaResponsiveOptions = ref([
 const carouselResponsiveOptions = ref([
     {
         breakpoint: '1024px',
-        numVisible: 3,
-        numScroll: 3
+        numVisible: 1,
+        numScroll: 1
     },
     {
         breakpoint: '768px',
@@ -73,59 +73,73 @@ const getSeverity = (status) => {
 </script>
 
 <template>
-    <div class="grid p-fluid">
-        <div class="col-12">
-            <div class="card">
-                <Carousel :value="products" :numVisible="3" :numScroll="3" :responsiveOptions="carouselResponsiveOptions">
-                    <template #item="slotProps">
-                        <div class="border-1 surface-border border-round m-2 p-3">
-                            <div class="mb-3">
-                                <div class="relative mx-auto">
-                                    <img :src="'/demo/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-full border-round" />
-                                    <Tag :value="slotProps.data.inventoryStatus" :severity="getSeverity(slotProps.data.inventoryStatus)" class="absolute" style="left: 5px; top: 5px" />
-                                </div>
-                            </div>
-                            <div class="flex justify-content-between align-items-center">
-                                <Button icon="pi pi-play" label="Play" outlined @click="play" />
-                            </div>
-                            <div class="mb-3 font-medium">{{ slotProps.data.name }}</div>
-                            <div class="flex justify-content-between align-items-center">
-                                <div class="mt-0 font-semibold text-xl">${{ slotProps.data.price }}</div>
-                                <span>
-                                    <Button icon="pi pi-heart" severity="secondary" outlined />
-                                    <Button icon="pi pi-shopping-cart" class="ml-2" />
-                                </span>
-                            </div>
-                        </div>
-                    </template>
-                </Carousel>
-            </div>
+  <div class="grid">
+    <div class="col-12">
+      <div class="card">
+        <div class="flex justify-content-center">
+          <Image  :src="'/images/generated_picture_0.png'" alt="Image"  />
         </div>
-
-        <div class="col-12">
-            <div class="card">
-                <h5>Image</h5>
-                <div class="flex justify-content-center">
-                    <Image :src="'/demo/images/galleria/galleria11.jpg'" alt="Image" width="250" preview />
-                </div>
-            </div>
+        <div class="flex justify-content-center" >
+          <Button type="button" class="mr-2 mb-2" label="Search" icon="pi pi-search"  />
+          <Button type="button" class="mr-2 mb-2" label="Search" icon="pi pi-search" />
+          <Button type="button" class="mr-2 mb-2" icon="pi pi-search" />
+          <Button type="button" class="mr-2 mb-2" label="Search" />
         </div>
-
-        <div class="col-12">
-            <div class="card">
-                <h5>Galleria</h5>
-                <Galleria :value="images" :responsiveOptions="galleriaResponsiveOptions" :numVisible="7"
-                    :circular="true" containerStyle="max-width: 800px; margin: auto">
-                    <template #item="slotProps">
-                        <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt"
-                            style="width: 100%; display: block" />
-                    </template>
-                    <template #thumbnail="slotProps">
-                        <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt"
-                            style="width: 100%; display: block;" />
-                    </template>
-                </Galleria>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
+<!--    <div class="grid">-->
+<!--        <div class="col-12">-->
+<!--            <div class="card">-->
+<!--                <Carousel :value="products" :numVisible="1" :numScroll="1" :responsiveOptions="carouselResponsiveOptions">-->
+<!--                    <template #item="slotProps">-->
+<!--                        <div class="border-1 surface-border border-round m-2 p-3">-->
+<!--                            <div class="mb-3">-->
+<!--                                <div class="relative mx-auto">-->
+<!--                                    <img :src="'/demo/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-full border-round" />-->
+<!--                                    <Tag :value="slotProps.data.inventoryStatus" :severity="getSeverity(slotProps.data.inventoryStatus)" class="absolute" style="left: 5px; top: 5px" />-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="flex justify-content-between align-items-center">-->
+<!--                                <Button icon="pi pi-play" label="Play" outlined @click="play" />-->
+<!--                            </div>-->
+<!--                            <div class="mb-3 font-medium">{{ slotProps.data.name }}</div>-->
+<!--                            <div class="flex justify-content-between align-items-center">-->
+<!--                                <div class="mt-0 font-semibold text-xl">${{ slotProps.data.price }}</div>-->
+<!--                                <span>-->
+<!--                                    <Button icon="pi pi-heart" severity="secondary" outlined />-->
+<!--                                    <Button icon="pi pi-shopping-cart" class="ml-2" />-->
+<!--                                </span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </template>-->
+<!--                </Carousel>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-12">-->
+<!--            <div class="card">-->
+<!--                <h5>Image</h5>-->
+<!--                <div class="flex justify-content-center">-->
+<!--                    <Image :src="'/demo/images/galleria/galleria11.jpg'" alt="Image" width="250" preview />-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-12">-->
+<!--            <div class="card">-->
+<!--                <h5>Galleria</h5>-->
+<!--                <Galleria :value="images" :responsiveOptions="galleriaResponsiveOptions" :numVisible="7"-->
+<!--                    :circular="true" containerStyle="max-width: 800px; margin: auto">-->
+<!--                    <template #item="slotProps">-->
+<!--                        <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt"-->
+<!--                            style="width: 100%; display: block" />-->
+<!--                    </template>-->
+<!--                    <template #thumbnail="slotProps">-->
+<!--                        <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt"-->
+<!--                            style="width: 100%; display: block;" />-->
+<!--                    </template>-->
+<!--                </Galleria>-->
+<!--            </div>-->
+<!--        </div>-->
 </template>
