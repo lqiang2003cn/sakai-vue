@@ -1,0 +1,14 @@
+{
+    "data": [
+        {"id": "1000","name": "afternoon","sentence": "I will read every morning <span class='first'>from now on</span>.","image": "afternoon.jpg","chinese": "下午"},
+        {"id": "1001","name": "soccer","sentence": "We <put> the ice cream <in> the freezer","image": "soccer.jpg","chinese": "英式足球"},
+        {"id": "1002","name": "apple","sentence": "Product Description","image": "apple.jpg","chinese": "苹果"},
+        {"id": "1003","name": "book","sentence": "Product Description","image": "book.jpg","chinese": "书"},
+        {"id": "1004","name": "ruler","sentence": "Product Description","image": "ruler.jpg","chinese": "尺子"},
+        {"id": "1005","name": "rubber","sentence": "Product Description","image": "rubber.jpg","chinese": "橡皮"},
+        {"id": "1006","name": "eye","sentence": "Product Description","image": "eye.jpg","chinese": "眼睛"}
+
+
+    ]
+}
+    
